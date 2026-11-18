@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf6f2">
+  <title>استبيان مستحضرات التجميل | القليعة</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#survey">انتقلي إلى الأسئلة</a>
+  <header class="mast"><strong><i aria-hidden="true">✳</i> استبيان التجميل</strong><span>القطب الجامعي بالقليعة</span></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div><h1 id="title">رأيك يساعدنا على اختيار <em>منتجات التجميل</em></h1>
+      <p>استبيان موجّه لطالبات القطب الجامعي بالقليعة لمعرفة المنتجات والماركات المطلوبة. الإجابات دون اسم أو رقم هاتف.</p></div>
+      <div class="swatches" aria-hidden="true"><i></i><i></i><i></i></div>
+    </section>
+    <noscript>يرجى تفعيل جافاسكريبت في المتصفح لإكمال الاستبيان.</noscript>
+    <form id="survey" hidden novalidate autocomplete="off">
+      <fieldset id="products"><legend>ما المنتجات التي ترغبين في شرائها؟</legend>
+        <div class="hint-line"><p>اختاري ثلاثة كحد أقصى.</p><output id="count" aria-live="polite"></output></div>
+        <div class="options" id="product-options"></div>
+        <label id="other-field" hidden>ما المنتج الآخر؟<input type="text" name="other" maxlength="200" dir="auto"></label>
+        <p class="error" id="other-error"></p><p class="error" id="products-error"></p>
+      </fieldset>
+      <fieldset id="current"><legend>ما ماركات التجميل والعناية التي تشترينها حاليًا؟</legend>
+        <p class="hint">اكتبي ثلاث ماركات كحد أقصى، أو اختاري «لا أشتري حاليًا».</p>
+        <div class="brand-controls"></div><p class="error" id="current-error"></p>
+      </fieldset>
+      <fieldset id="wanted"><legend>ما الماركات التي ترغبين في شرائها من متجرنا؟</legend>
+        <p class="hint">اكتبي ثلاث ماركات كحد أقصى، أو اختاري «ليس لدي تفضيل».</p>
+        <div class="brand-controls"></div><p class="error" id="wanted-error"></p>
+      </fieldset>
+      <fieldset id="spending"><legend>كم أنفقتِ خلال آخر شهر على المكياج والعناية بالبشرة والشعر إجمالًا؟</legend>
+        <p class="hint">اختاري إجابة واحدة.</p><div class="options" id="spending-options"></div><p class="error" id="spending-error"></p>
+      </fieldset>
+      <div class="send"><button type="submit">إرسال الإجابات</button><p role="status" id="status"></p></div>
+    </form>
+    <section id="success" hidden tabindex="-1"><h2>شكرًا لمشاركتك!</h2><p>تم حفظ إجاباتك بنجاح.</p></section>
+  </main>
+</body>
+</html>

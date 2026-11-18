@@ -1,0 +1,7 @@
+{
+  "name": "kolea-cosmetics-survey",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": { "start": "node server.js", "test": "node --test tests/api.test.js" }
+}
